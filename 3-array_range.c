@@ -3,25 +3,25 @@
 
 /**
  * array_range - creates array
- * @minv: min value
- * @maxv: max value
+ * @min: min value
+ * @max: max value
  * Return: pointer to array
  */
-int *array_range(int minv, int maxv)
+int *array_range(int min, int max)
 {
 	int *arr;
 	int length;
 	int i = 0;
 
-	if (minv > maxv)
+	if (min > max)
 		return (NULL);
-	length = maxv - minv + 1;
+	length = max - min + 1;
 	arr = malloc(length * sizeof(int));
 	if (arr == NULL)
 		return (NULL);
 	while (i < length)
 	{
-		arr[i] = minv + i;
+		arr[i] = min + i;
 		i++;
 	}
 	return (arr);
